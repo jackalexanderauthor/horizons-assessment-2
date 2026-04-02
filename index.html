@@ -104,9 +104,44 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Conversation Game" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="94ED534A-5D79-4F53-9D20-99719A37C1BF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The Campfire" tags="" position="100,200" size="100,100">Who do you want to talk to?</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="25,25" size="100,100">&lt;&lt;set $Afriend to 5&gt;&gt;
-&lt;&lt;set $Bfriend to 6&gt;&gt;
-&lt;&lt;set $Cfriend to 7&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="PassageHeader" tags="" position="150,25" size="100,100">✧✧✧✧✧                                                                                               </tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="275,25" size="100,100">Your relationship with A is: $Afriend
+	<tw-storydata name="Conversation Game" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="94ED534A-5D79-4F53-9D20-99719A37C1BF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="The Campfire" tags="" position="100,200" size="100,100">Who do you want to talk to?</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="25,25" size="100,100">&lt;&lt;set $Afriend to 10&gt;&gt;
+&lt;&lt;set $Bfriend to 10&gt;&gt;
+&lt;&lt;set $Cfriend to 10&gt;&gt;
+
+0 &lt;&lt;set $mortalEnemies_caption to &quot;You and $friendName despise each other. You do not trust her to not murder you in your sleep this very night.&quot;&gt;&gt;
+1,2 &lt;&lt;set $enemies_caption to &quot;You and $friendName hate each other. You do not trust her with your life: in fact, you suspect she may encourage its endangerment.&quot;&gt;&gt;
+3,4 &lt;&lt;set $foes_caption to &quot;You and $friendName share an intense dislike of each other. You do not trust her to save your life, if it came down to it.&quot;&gt;&gt;
+5,6 &lt;&lt;set $rivals_caption to &quot;You and $friendName have a mutual distaste for the other. Still, if it came down to it, she would do what she could to save you. Hopefully.&quot;&gt;&gt;
+7,8 &lt;&lt;set $colleagues_caption to &quot;You and $friendName don&#39;t quite get along. Still, you trust her with your life, if only because it would benefit her.&quot;&gt;&gt;
+9,10,11 &lt;&lt;set $comrades_caption to &quot;You and $friendName are comrades-in-arms. You trust her with your life -- although, admittedly, little else.&quot;&gt;&gt;
+12,13 &lt;&lt;set $friends_caption to &quot;You and $friendName are good friends. 
+14,15 &lt;&lt;set $brothersInArms_caption to &quot;
+16,17
+18,19
+20 &lt;&lt;set $soulmates to &quot;You and $friendName are bonded, body and soul alike. She would lay down her life for you, and you for her.&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="PassageHeader" tags="" position="150,25" size="100,100">✧✧✧✧✧
+
+----
+
+</tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="" position="275,25" size="100,100">&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if $Afriend lte 10&gt;&gt;
+		&lt;&lt;set $friendName to &quot;Friend A&quot;&gt;&gt;
+    	&lt;&lt;print $enemies&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		congrats!
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;nobr&gt;&gt;
+	&lt;&lt;if $Bfriend lte 10&gt;&gt;
+    	&lt;&lt;set $friendName to &quot;Friend B&quot;&gt;&gt;
+        &lt;&lt;print $enemies&gt;&gt;
+    &lt;&lt;else&gt;&gt;
+    	congrats 2!
+    &lt;&lt;/if&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;
+
+Your relationship with A is: $Afriend
 With B is: $Bfriend
 And with C is: $Cfriend</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
